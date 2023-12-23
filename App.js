@@ -2,9 +2,9 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import IntroductionScreen from './IntroductionScreen';
-import LoginScreen from './LoginScreen';
-import FazerPedidoScreen from './FazerPedidoScreen';
+import IntroductionScreen from './page/IntroductionScreen';
+import LoginScreen from './page/LoginScreen';
+import FazerPedidoScreen from './page/FazerPedidoScreen';
 
 
 
