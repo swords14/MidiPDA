@@ -1,11 +1,11 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import IntroductionScreen from './page/IntroductionScreen';
 import LoginScreen from './page/LoginScreen';
-import FazerPedidoScreen from './page/FazerPedidoScreen';
-
+import WishScreen from './page/WishScreen';
+import AppStyles, { styles } from './layout/AppStyles'
 
 
 // Tela Inicial
@@ -21,34 +21,34 @@ const MidiPDAHomeComponent = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={AppStyles.container}>
       <Image
         source={{ uri: 'https://i.imgur.com/N7Tbx3m.png' }}
-        style={styles.logo}
+        style={AppStyles.logo}
         resizeMode="contain"
       />
-      <Text style={styles.title}>Midi PDA</Text>
-      <Text style={styles.subtitle}>Seu parceiro de vendas</Text>
+      <Text style={AppStyles.title}>Midi PDA</Text>
+      <Text style={AppStyles.subtitle}>Seu parceiro de vendas</Text>
 
       <TouchableOpacity
-        style={styles.button}
+        style={AppStyles.button}
         onPress={navigateToFazerPedido}
       >
-        <Text style={styles.buttonText}>Fazer Pedido</Text>
+        <Text style={AppStyles.buttonText}>Fazer Pedido</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
+        style={AppStyles.button}
         onPress={() => navigation.navigate('HistoricoPedidos')}
       >
-        <Text style={styles.buttonText}>Histórico de Pedidos</Text>
+        <Text style={AppStyles.buttonText}>Histórico de Pedidos</Text>
       </TouchableOpacity>
 
       <TouchableOpacity
-        style={styles.button}
+        style={AppStyles.button}
         onPress={() => navigation.navigate('Configuracoes')}
       >
-        <Text style={styles.buttonText}>Configurações</Text>
+        <Text style={AppStyles.buttonText}>Configurações</Text>
       </TouchableOpacity>
     </View>
   );
@@ -65,48 +65,12 @@ const App = () => {
         <Stack.Screen name="Introduction" component={IntroductionScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="MidiPDAHome" component={MidiPDAHomeComponent} />
-        <Stack.Screen name="FazerPedido" component={FazerPedidoScreen} />
+        <Stack.Screen name="FazerPedido" component={WishScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  logo: {
-    width: '80%',
-    height: 80,
-    alignSelf: 'center',
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  subtitle: {
-    fontSize: 16,
-    color: '#888',
-    marginBottom: 30,
-  },
-  button: {
-    backgroundColor: '#3498db',
-    padding: 15,
-    borderRadius: 15,
-    width: '80%',
-    marginBottom: 20,
-  },
-  buttonText: {
-    color: '#fff',
-    fontSize: 16,
-    textAlign: 'center',
-  },
-});
 
 export default App;
