@@ -41,7 +41,7 @@ const IntroductionScreen = () => {
 
   const proceedToMidiPDA = () => {
     markOnboardingAsSeen();
-    navigation.navigate('MidiPDAHome');
+    navigation.navigate('Login');
   };
 
   return (

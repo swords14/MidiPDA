@@ -12,7 +12,7 @@ const LoginScreen = ({ navigation }) => {
     // Por exemplo, verificar usuário/senha
 
     // Se a autenticação for bem-sucedida, navegue para a tela inicial (Home)
-    navigation.navigate('Home');
+    navigation.navigate('MidiPDAHome');
   };
 
   return (
