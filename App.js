@@ -2,8 +2,11 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import IntroductionScreen from './IntroductionScreen';
 import LoginScreen from './LoginScreen';
 import FazerPedidoScreen from './FazerPedidoScreen';
+
+
 
 // Tela Inicial
 const MidiPDAHomeComponent = ({ navigation }) => {
@@ -58,11 +61,12 @@ const Stack = createStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Login">
+      <Stack.Navigator initialRouteName="Introduction" headerMode="none">
+        <Stack.Screen name="Introduction" component={IntroductionScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Home" component={MidiPDAHomeComponent} />
+        <Stack.Screen name="MidiPDAHome" component={MidiPDAHomeComponent} />
         <Stack.Screen name="FazerPedido" component={FazerPedidoScreen} />
-        {/* Adicione outras telas aqui, se necessário */}
+
       </Stack.Navigator>
     </NavigationContainer>
   );
