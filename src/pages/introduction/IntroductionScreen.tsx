@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
-import Swiper from 'react-native-swiper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useNavigation } from '@react-navigation/native';
-import styles from './IntroductionScreenStyle'
+import React, { useEffect, useState } from 'react';
+import { Image, Text, TouchableOpacity, View } from 'react-native';
+import Swiper from 'react-native-swiper';
+import styles from './IntroductionScreenStyle';
+import { Page } from '../../types/Page';
 
-const IntroductionScreen: React.FC = () => {
+const IntroductionScreen: React.FC<Page> = ({ navigation }) => {
   const [hasSeenOnboarding, setHasSeenOnboarding] = useState<boolean>(false);
-  const navigation = useNavigation();
 
   useEffect(() => {
     checkOnboardingStatus();

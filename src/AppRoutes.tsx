@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-//import IntroductionScreen from './page/IntroductionScreen';
+import IntroductionScreen from './pages/introduction/IntroductionScreen';
 import LoginScreen from './pages/login/LoginScreen';
 //import FazerPedidoScreen from './page/FazerPedidoScreen';
 import MidiPDAHomeScreen from './components/MidiPDAHomeScreen';
