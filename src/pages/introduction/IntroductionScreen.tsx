@@ -39,7 +39,7 @@ const IntroductionScreen: React.FC<Page> = ({ navigation }) => {
 
   const proceedToMidiPDA = () => {
     markOnboardingAsSeen();
-    navigation.navigate('MidiPDAHome');
+    navigation.navigate('Login');
   };
 
   return (
