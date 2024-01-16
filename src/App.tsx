@@ -2,11 +2,10 @@
 
 import React from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import IntroductionScreen from './page/IntroductionScreen';
-import LoginScreen from './page/LoginScreen';
-import FazerPedidoScreen from './page/FazerPedidoScreen';
+//import IntroductionScreen from './page/IntroductionScreen';
+//import FazerPedidoScreen from './page/FazerPedidoScreen';
+import AppRoutes from './AppRoutes'
 
 // Importando o arquivo CSS externo
 import './components/layout/App.css';
@@ -64,18 +63,8 @@ const MidiPDAHomeComponent: React.FC<MidiPDAHomeProps> = ({ navigation }) => {
 // Configuração do React Navigation Stack
 const Stack = createStackNavigator();
 
-// Componente principal
 const App: React.FC = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Introduction" headerMode="none">
-        <Stack.Screen name="Introduction" component={IntroductionScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="MidiPDAHome" component={MidiPDAHomeComponent} />
-        <Stack.Screen name="FazerPedido" component={FazerPedidoScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
+  return <AppRoutes />;
+}
 
 export default App;

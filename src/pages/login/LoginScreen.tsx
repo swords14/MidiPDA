@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
-import LoginScreenStyles from '../layout/LoginScreenStyles';
+import LoginScreenStyles from './LoginScreenStyles';
 
 interface LoginScreenProps {
   navigation: any;
