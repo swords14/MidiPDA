@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 const WishOrderScreenStyles = StyleSheet.create({
+  text: {
+    marginBottom: 10,
+    fontSize: 15,
+  },
   container: {
     flexGrow: 1,
     justifyContent: 'center',
@@ -10,6 +14,7 @@ const WishOrderScreenStyles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginTop: 40,
     marginBottom: 10,
   },
   sectionContainer: {
@@ -37,6 +42,7 @@ const WishOrderScreenStyles = StyleSheet.create({
     marginBottom: 10,
     padding: 10,
     width: '100%',
+    borderRadius: 15,
   },
   switchContainer: {
     flexDirection: 'row',
@@ -49,20 +55,12 @@ const WishOrderScreenStyles = StyleSheet.create({
     borderRadius: 15,
     width: '80%',
     marginTop: 20,
+    marginBottom: 8,
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     textAlign: 'center',
-  },
-  precoButton: {
-    backgroundColor: '#ddd',
-    padding: 10,
-    borderRadius: 8,
-    marginVertical: 5,
-  },
-  precoButtonSelected: {
-    backgroundColor: '#3498db',
   },
 });
 

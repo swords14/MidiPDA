@@ -2,8 +2,10 @@ import { StyleSheet } from 'react-native'
 
 const MidiPDAHomeStyle = StyleSheet.create({
   container: {
-    padding: 5,
-    backgroundColor: 'white',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
   },
   logo: {
     width: '80%',
@@ -12,23 +14,24 @@ const MidiPDAHomeStyle = StyleSheet.create({
     marginBottom: 20,
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 2,
+    marginBottom: 10,
   },
   subtitle: {
     fontSize: 16,
-    color: 'gray',
-    marginBottom: 5,
+    color: '#888',
+    marginBottom: 30,
   },
   button: {
-    backgroundColor: 'blue',
-    padding: 5,
-    borderRadius: 8,
-    marginBottom: 5,
+    backgroundColor: '#3498db',
+    padding: 15,
+    borderRadius: 15,
+    width: '80%',
+    marginBottom: 20,
   },
   buttonText: {
-    color: 'white',
+    color: '#fff',
     fontSize: 16,
     textAlign: 'center',
   },
